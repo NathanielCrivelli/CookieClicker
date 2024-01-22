@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import React from 'react';
+import cookiepng from './Cookie.png';
 
 function App() {
+  const [score, setscore] = useState(0);
+  
+  function increment() {
+    setscore(score + 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Cookie">
+      <button onClick={() => increment()}>Cookie</button>
+      <h1>Cookies: {score} </h1>
     </div>
   );
 }
