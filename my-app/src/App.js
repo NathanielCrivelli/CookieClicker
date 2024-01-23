@@ -1,7 +1,6 @@
 import './App.css';
 import { useState } from 'react';
 import React from 'react';
-import cookiepng from './Cookie.png';
 
 function App() {
   const [score, setscore] = useState(0);
@@ -11,9 +10,13 @@ function App() {
   }
 
   return (
-    <div className="Cookie">
-      <button onClick={() => increment()}>Cookie</button>
+    <div>
+      <button onClick={() => increment()}
+        className='cookie-button'>
+        </button>
       <h1>Cookies: {score} </h1>
+
+      
     </div>
   );
 }
