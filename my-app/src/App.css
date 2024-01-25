@@ -8,3 +8,25 @@
   background-image: url(Cookie.png);
   border: none;
 }
+
+.CPS-display {
+  font-size: 12px;
+  width: 100px;
+  height: 12px;
+  border-style: solid;
+  padding: 2px;
+}
+
+.Upgrade-box {
+  width: 200px;
+  height: 150px;
+  border-style: solid;
+  padding: 2px
+}
+
+.buy-button {
+  width: 200px;
+  height: 30px;
+  gap: 10px;
+  cursor: pointer;
+}
