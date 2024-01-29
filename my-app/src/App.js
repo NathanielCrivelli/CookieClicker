@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import Upgrade from './Upgrades';
 
@@ -17,6 +17,17 @@ function App() {
       setCPS(CPS + cpsnum)
     }
   }
+
+  useEffect(() => {
+    let interval = null;
+    if (CPS > 0) {
+      interval = setInterval(() => {
+        setScore(score => score + CPS);
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [CPS]);
 
   return (
     <div>
